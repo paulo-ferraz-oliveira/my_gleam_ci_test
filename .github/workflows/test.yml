@@ -18,4 +18,8 @@ jobs:
           gleam-version: "0.23"
           rebar3-version: "3.20"
       - shell: cmd
+        run: rebar3
+      - shell: cmd
+        run: rebar3.cmd
+      - shell: cmd
         run: gleam clean && gleam build 
