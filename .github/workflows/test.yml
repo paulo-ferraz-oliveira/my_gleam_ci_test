@@ -16,4 +16,7 @@ jobs:
         with:
           otp-version: "25"
           gleam-version: "0.23"
-      - run: rebar3.cmd
+      - shell: cmd
+        run: rebar3.cmd
+      - shell: cmd
+        run: rebar3
