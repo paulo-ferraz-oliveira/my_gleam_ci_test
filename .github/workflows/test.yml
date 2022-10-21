@@ -9,13 +9,11 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: erlef/setup-beam@v1
+      - uses: paulo-ferraz-oliveira/setup-beam@feature/rebar3.cmd
         with:
           otp-version: "25"
           gleam-version: "0.23"
-      - run: gleam format --check src test
-      - run: gleam deps download
-      - run: gleam test
+      - run: rebar3.cmd
