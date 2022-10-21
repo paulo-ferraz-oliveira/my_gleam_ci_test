@@ -17,6 +17,8 @@ jobs:
           otp-version: "25"
           gleam-version: "0.23"
       - shell: cmd
+        run: echo "\"%~dpn0\""
+      - shell: cmd
         run: rebar3.cmd
       - shell: cmd
         run: rebar3
